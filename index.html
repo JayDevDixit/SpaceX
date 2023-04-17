@@ -1,0 +1,660 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" contenprimarydth=device-width, initial-scale="1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Mynerve&display=swap" rel="stylesheet">
+  <title>SpaceX</title>
+
+</head>
+<link rel="stylesheet" href="\CSS\Home.css">
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light " id="navigation_bar" style="width: 100vw; z-index: 2;">
+    <div class="container-fluid" >
+      <a class="navbar-brand" id="SpaceX" href="#">
+        <img src="/images/logo.jpg" alt="" width="30" height="40" class="d-inline-block align-text-middle" >
+        SpaceX
+      </a>
+      <a class="navbar-brand" href="/inbox.html"><button type="button" class="btn btn-danger position-relative btn-sm">
+          <i class="bi bi-envelope-exclamation"></i> Inbox
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            2+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="\notification.html"><button type="button"
+                class="btn btn-danger btn-sm" id="nav_notifications">
+                <i class="bi bi-send"></i> Notifications <span class="badge bg-secondary">4</span>
+              </button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar_font" href="#">Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar_font" href="contact.html">Contact us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle navbar_font" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item navbar_font" href="#">Action</a></li>
+              <li><a class="dropdown-item navbar_font" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item navbar_font" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2 my-3" id="search_box" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-danger btn-sm my-2" id="nav_btn_search" type="submit"><i
+              class="bi bi-search"></i>Search</button>
+          <button type="button" class="btn btn-danger btn-sm mx-2 my-2 " id="nav_btn_login" data-bs-toggle="modal"
+            data-bs-target="#LoginModal"><i class="bi bi-person-circle"></i>Login</button>
+          <button type="button" class="btn btn-danger btn-sm my-2" id="nav_btn_signup" data-bs-toggle="modal"
+            data-bs-target="#SignupModal"><i class="bi bi-person-bounding-box "></i>Signup</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">
+  Launch demo modal
+</button> -->
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><img src="/images/logo.jpg" alt="" width="100" height="80">
+            <B><i><span id="Login">Login
+                  to SpaceX</span></i></B>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label hand"> <img src="/images/Gmail.png" alt="" width="37"
+                  height="27">
+                Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label hand"> <img src="/images/password.jpg" alt=""
+                  width="37" height="30">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label hand" id="bot" for="exampleCheck1"><i class="bi bi-robot"></i> I am not a
+                Bot</label>
+            </div>
+            <button type="submit" data-bs-dismiss="modal" class="btn btn-danger position-relative btn-sm">Login <i
+                class="bi bi-symmetry-horizontal"></i></button>
+
+          </form>
+
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup modal -->
+  <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="SignupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SignupModalLabel"><img src="/images/logo.jpg" alt="" width="100" height="80">
+            <B><i><span id="Signup">Signup
+                  to SpaceX</span></i></B>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm"><i class="bi bi-person-badge"></i> Enter
+                Name</span>
+              <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm"><i
+                  class="bi bi-telephone-inbound-fill"></i></span>
+              <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+
+            <div class="mb-3">
+              <span class="mb-3" id="inputphoto"><i class="bi bi-card-image"></i> Upload your picture</span>
+              <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"> <img src="/images/Gmail.png" alt="" width="37"
+                  height="27">
+                Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"><i class="bi bi-lock-fill"></i> Create New
+                Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <fieldset class="row mb-3">
+              <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
+                    checked>
+                  <label class="form-check-label" for="gridRadios1">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <label class="form-check-label" for="gridRadios2">
+                    Female
+                  </label>
+                </div>
+
+              </div>
+            </fieldset>
+            <div class="row mb-3">
+              <div class="col-sm-10 offset-sm-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label hand" for="gridCheck1">
+                    Are you married ?
+                  </label>
+                </div>
+              </div>
+            </div>
+
+
+            <button type="submit" data-bs-dismiss="modal" class="btn btn-danger position-relative btn-sm my-3 mx-2"><i
+                class="bi bi-person-plus"></i> Create Account </button>
+          </form>
+
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel code starts -->
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active"
+        aria-current="true"></button>
+    </div>
+    <div class="carousel-inner" style="height: 100vh;">
+
+      <div class="carousel-item active carousel_slide c-img">
+        <img src="/images/1.jpg" class="d-block c-img" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Upcoming</h5>
+          <p>STARSHIP FLIGHT TEST</p>
+          <button class="btn btn-danger crousal_btn_1"><i class="bi bi-broadcast-pin"></i> Technology</button>
+          <button class="btn btn-primary crousal_btn_2"><i class="bi bi-lightbulb"></i> Ideas</button>
+          <button class="btn btn-success crousal_btn_3"><i class="bi bi-newspaper"></i> News</button>
+        </div>
+      </div>
+
+      <div class="carousel-item carousel_slide">
+        <img src="/images/2.jpg" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Recent Launch</h5>
+          <p>TRANSPORTER-7 MISSION</p>
+          <button class="btn btn-danger crousal_btn_1"><i class="bi bi-broadcast-pin"></i> Technology</button>
+          <button class="btn btn-primary crousal_btn_2"><i class="bi bi-lightbulb"></i> Ideas</button>
+          <button class="btn btn-success crousal_btn_3"><i class="bi bi-newspaper"></i> News</button>
+        </div>
+      </div>
+
+      <div class="carousel-item carousel_slide">
+        <img src="/images/3.jpg" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>NASA</h5>
+          <p>STARSHIP SELECTED BY NASA TO SUPPORT SUSTAINED LUNAR EXPLORATION</p>
+          <button class="btn btn-danger crousal_btn_1"><i class="bi bi-broadcast-pin"></i> Technology</button>
+          <button class="btn btn-primary crousal_btn_2"><i class="bi bi-lightbulb"></i> Ideas</button>
+          <button class="btn btn-success crousal_btn_3"><i class="bi bi-newspaper"></i> News</button>
+        </div>
+      </div>
+
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+    <!-- carousel code ends -->
+
+    <!-- card code starts -->
+    <div class="myflex">
+    <div class="card" style="width: 18rem; margin: 0;">
+      <img src="/images/4.jpg" class="card-img-top" style="margin-left: 0;" alt="Error to load image of card">
+      <div class="card-body">
+        <h5 class="card-title">Galaxy</h5>
+        <p class="card-text">A galaxy is a system of stars, stellar remnants, interstellar gas, dust, dark matter, bound together by gravity. The word is derived from the Greek galaxias, literally 'milky', a reference to the Milky Way galaxy that contains the Solar System. </p>
+        <a href="#" class="btn btn-danger " id="card_btn_Register"><i class="bi bi-boxes"></i> More</a>
+        <a href="#" class="btn btn-danger" id="card_btn_Talkback"><i class="bi bi-soundwave"></i>Talkback</a>
+        <a href="#" class="btn btn-danger" id="card_btn_bookmark"><i class="bi bi-bookmark"></i> Bookmark</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="/images/5.jpg" class="card-img-top" alt="Error to load image of card">
+      <div class="card-body">
+        <h5 class="card-title">Rocket Launch</h5>
+        <p class="card-text">The Starship Orbital Flight Test is the planned first spaceflight of the SpaceX Starship launch vehicle. The planned launch site is Boca Chica, Texas. SpaceX plans on using Starship prototypes Ship 24 and Booster 7</p>
+        <a href="#" class="btn btn-danger" id="card_btn_Register"><i class="bi bi-boxes"></i> More</a>
+        <a href="#" class="btn btn-danger" id="card_btn_Talkback"><i class="bi bi-soundwave"></i>Talkback</a>
+        <a href="#" class="btn btn-danger" id="card_btn_bookmark"><i class="bi bi-bookmark"></i> Bookmark</a>
+      </div>
+    </div>
+
+    
+
+    <div class="card" style="width: 18rem;">
+      <img src="/images/6.jpg" class="card-img-top" id="cardimage" alt="Error to load image of card">
+      <div class="card-body">
+        <h5 class="card-title">Mars</h5>
+        <p class="card-text">Mars is the fourth planet from the Sun and the third largest and massive terrestrial object in the Solar System. Mars has a thin atmosphere and a crust primarily composed of elements similar to Earth's crust, as well as a core made of iron and nickel.</p>
+        <a href="#" class="btn btn-danger" id="card_btn_Register"><i class="bi bi-boxes"></i> More</a>
+        <a href="#" class="btn btn-danger" id="card_btn_Talkback"><i class="bi bi-soundwave"></i>Talkback</a>
+        <a href="#" class="btn btn-danger" id="card_btn_bookmark"><i class="bi bi-bookmark"></i> Bookmark</a>
+      </div>
+    </div>
+  </div>
+    <!-- card code ends -->
+    <div class="myflex">
+      <div class="card" style="width: 18rem; margin: 0;">
+        <img src="/images/7.jpg" class="card-img-top" style="margin-left: 0;" alt="Error to load image of card">
+        <div class="card-body">
+          <h5 class="card-title">Launch</h5>
+          <p class="card-text">The launch of a spacecraft comprises a period of powered flight during which the vehicle rises above Earth's atmosphere and accelerates at least to orbital velocity. Powered flight ends when the rocket's last stage burns out, and the spacecraft separates and continues in freefall.</p>
+          <a href="#" class="btn btn-danger " id="card_btn_Register"><i class="bi bi-boxes"></i> More</a>
+          <a href="#" class="btn btn-danger" id="card_btn_Talkback"><i class="bi bi-soundwave"></i>Talkback</a>
+          <a href="#" class="btn btn-danger" id="card_btn_bookmark"><i class="bi bi-bookmark"></i> Bookmark</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/images/8.jpg" class="card-img-top" alt="Error to load image of card">
+        <div class="card-body">
+          <h5 class="card-title">Stars</h5>
+          <p class="card-text">A star is a luminous ball of gas, mostly hydrogen and helium, held together by its own gravity. Nuclear fusion reactions in its core support the star against gravity and produce photons and heat, as well as small amounts of heavier elements.</p>
+          <a href="#" class="btn btn-danger" id="card_btn_Register"><i class="bi bi-boxes"></i> More</a>
+          <a href="#" class="btn btn-danger" id="card_btn_Talkback"><i class="bi bi-soundwave"></i>Talkback</a>
+          <a href="#" class="btn btn-danger" id="card_btn_bookmark"><i class="bi bi-bookmark"></i> Bookmark</a>
+        </div>
+      </div>
+  
+      
+  
+      <div class="card" style="width: 18rem;">
+        <img src="/images/9.jpg" class="card-img-top" id="cardimage" alt="Error to load image of card">
+        <div class="card-body">
+          <h5 class="card-title">Nebula</h5>
+          <p class="card-text">A nebula is a distinct luminescent part of interstellar medium, which can consist of ionized, neutral or molecular hydrogen and also cosmic dust. Nebulae are often star-forming regions, such as in the "Pillars of Creation" in the Eagle Nebula</p>
+          <a href="#" class="btn btn-danger" id="card_btn_Register"><i class="bi bi-boxes"></i> More</a>
+          <a href="#" class="btn btn-danger" id="card_btn_Talkback"><i class="bi bi-soundwave"></i>Talkback</a>
+          <a href="#" class="btn btn-danger" id="card_btn_bookmark"><i class="bi bi-bookmark"></i> Bookmark</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- place holder starts here -->
+    <span class="placeholder col-12 myflex" id="placeholder">
+      <!-- code of button 1 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button " type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Buisness
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+      <!-- code of button 1 on placeholder ends -->
+
+      <!-- code of button 2 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Quizes
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+      <!-- code of button 2 on placeholder ends -->
+
+      <!-- code of button 3 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Culture
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+      <!-- code of button 3 on placeholder ends -->
+
+      <!-- code of button 4 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Arts
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+      <!-- code of button 4 on placeholder ends -->
+
+      <!-- code of button 5 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Hackathon
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+      <!-- code of button 5 on placeholder ends -->
+
+      <!-- code of button 6 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+         Research
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+      <!-- code of button 6 on placeholder ends -->
+
+      <!-- code of button 7 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Article
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+      <!-- code of button 7 on placeholder ends -->
+
+      <!-- code of button 8 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+        Journal
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+      <!-- code of button 8 on placeholder ends -->
+
+      <!-- code of button 9 on place holder starts -->
+      <div class="btn-group">
+        <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Expert views
+        </button>
+        <ul class="dropdown-menu placeholder_links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+        </ul>
+      </div>
+<!-- code of button 9 on placeholder ends -->
+
+<!-- code of button 10 on place holder starts -->
+<div class="btn-group">
+  <button class="btn btn-danger btn-sm dropdown-toggle placeholder_button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Life lesson
+  </button>
+  <ul class="dropdown-menu placeholder_links">
+    <li><a href="">Link 1</a></li>
+    <li><a href="">Link 2</a></li>
+    <li><a href="">Link 3</a></li>
+    <li><a href="">Link 4</a></li>
+  </ul>
+</div>
+<!-- code of button 10 on placeholder ends -->
+    </span>
+
+    <!-- placeholder ends here -->
+
+
+
+    <!-- Horizontai card 1st row starts -->
+    <div class="myflex">
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="/images/10.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Solar Eclipse</h5>
+            <p class="card-text">A solar eclipse occurs when the Moon passes between Earth and the Sun and thereby obscures the view of the Sun from a small part of the Earth, totally or partially.</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="/images/11.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Earth</h5>
+            <p class="card-text">Earth is the third planet from the Sun and the only place known in the universe where life has originated and found habitability.</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Horizontal card 1nd row ends -->
+    <div class="myflex">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/images/12.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Astronaut</h5>
+              <p class="card-text">An astronaut is a person trained, equipped, and deployed by a human spaceflight program to serve as a commander or crew member aboard a spacecraft.</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/images/13.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Satellite</h5>
+              <p class="card-text">A satellite or artificial satellite is an object intentionally placed into orbit in outer space. Satellites have a variety of uses, including communication relay, weather forecasting, navigation, broadcasting, scientific research, and Earth observation.</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="myflex">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/images/14.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Exoplannet</h5>
+              <p class="card-text">An exoplanet was defined by the following criteria: Objects with true masses below the limiting mass for thermonuclear fusion of deuterium (currently calculated to be 13 Jupiter masses for objects of solar metallicity) that orbit stars </p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/images/15.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Moon</h5>
+              <p class="card-text">The Moon is Earth's only natural satellite. It is the fifth largest satellite in the Solar System and the largest</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card text-bg-dark">
+      <img src="/images/16.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Launch</h5>
+        <p class="card-text">The launch of a spacecraft comprises a period of powered flight during which the vehicle rises above Earth's atmosphere and accelerates at least to orbital velocity. Powered flight ends when the rocket's last stage burns out, and the spacecraft separates and continues in freefall.Axiom Space’s Director of Human Spaceflight and former NASA astronaut Peggy Whitson will command the privately funded mission. John Shoffner of Knoxville, Tennessee, will serve as pilot. The two mission specialists, Ali Alqarni and Rayyanah Barnawi from the Kingdom of Saudi Arabia, are members of the inaugural Saudi national astronaut program. They are flying through an arrangement between KSA and Axiom Space. Once docked, the private astronauts plan to spend 10 days aboard the orbiting laboratory implementing a full mission of science, outreach, and commercial activities.The Crew Flight Test will demonstrate the ability of Starliner and the United Launch Alliance’s Atlas V rocket to safely carry astronauts to and from the International Space Station. Following a successful test flight with astronauts, NASA will begin the final process of certifying the Starliner spacecraft and systems for regular crew rotation flights to the space station.</p>
+        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+    <div class="card text-bg-dark">
+      <img src="/images/17.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Nebula</h5>
+        <p class="card-text">A nebula ('cloud' or 'fog' in Latin;[1] pl. nebulae, nebulæ or nebulas[2][3][4][5]) is a distinct luminescent part of interstellar medium, which can consist of ionized, neutral or molecular hydrogen and also cosmic dust. Nebulae are often star-forming regions, such as in the "Pillars of Creation" in the Eagle Nebula. In these regions, the formations of gas, dust, and other materials "clump" together to form denser regions, which attract further matter, and eventually will become dense enough to form stars. The remaining material is then thought to form planets and other planetary system objects.
+
+          Most nebulae are of vast size; some are hundreds of light-years in diameter. A nebula that is visible to the human eye from Earth would appear larger, but no brighter, from close by.[6] The Orion Nebula, the brightest nebula in the sky and occupying an area twice the angular diameter of the full Moon, can be viewed with the naked eye but was missed by early astronomers.[7] Although denser than the space surrounding them, most nebulae are far less dense than any vacuum created on Earth – a nebular cloud the size of the Earth would have a total mass of only a few kilograms. Earth's air has a density of approximately 1019 molecules per cubic centimeter; by contrast the densest nebulae can have densities of 10,000 molecules per cubic centimeter. Many nebulae are visible due to fluorescence caused by embedded hot stars, while others are so diffused that they can be detected only with long exposures and special filters. Some nebulae are variably illuminated by T Tauri variable stars.</p>
+        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+    <div class="card text-bg-dark">
+      <img src="/images/18.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Rocket Launch</h5>
+        <p class="card-text">A rocket (from Italian: rocchetto, lit. 'bobbin/spool')[nb 1][1] is a vehicle that uses jet propulsion to accelerate without using the surrounding air. A rocket engine produces thrust by reaction to exhaust expelled at high speed.[2] Rocket engines work entirely from propellant carried within the vehicle; therefore a rocket can fly in the vacuum of space. Rockets work more efficiently in a vacuum and incur a loss of thrust due to the opposing pressure of the atmosphere.
+
+          Multistage rockets are capable of attaining escape velocity from Earth and therefore can achieve unlimited maximum altitude. Compared with airbreathing engines, rockets are lightweight and powerful and capable of generating large accelerations. To control their flight, rockets rely on momentum, airfoils, auxiliary reaction engines, gimballed thrust, momentum wheels, deflection of the exhaust stream, propellant flow, spin, or gravity.</p>
+        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+    <div class="card text-bg-dark">
+      <img src="/images/19.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">The Last Rocket</h5>
+        <p class="card-text">The Last Rocket is the debut studio album by American rapper Takeoff and his only solo release during his lifetime. It was released on November 2, 2018, by Capitol Records, Motown and Quality Control Music. First announced through a private party in Los Angeles, California on October 23, 2018, the album's release made Takeoff the second member of Migos to release a solo album, following Quavo's Quavo Huncho in October 2018 and preceding Offset's Father of 4 the following year.</p>
+        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <script src="/JavaScript/Home.js"></script>
+
+</body>
+
+</html>
